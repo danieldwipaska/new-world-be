@@ -1,0 +1,27 @@
+service: react-ts-new-world
+
+useDotenv: true
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-southeast-3
+  environment:
+    MONGO_SECRET: ${env:MONGO_SECRET}
+
+    ACCESS_TOKEN_SECRET: ${env:ACCESS_TOKEN_SECRET}
+
+functions:
+  main:
+    handler: dist/serverless.handler
+    timeout: 45
+    events:
+      - http:
+          method: ANY
+          path: /
+      - http:
+          method: ANY
+          path: '{proxy+}'
