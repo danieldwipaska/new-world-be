@@ -37,8 +37,15 @@ export class PostsService {
     }
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} post`;
+  async findOne(postId: string): Promise<Post> {
+    try {
+      const post: Post = await this.postModel.findOne({ postId });
+      if (!post) throw new NotFoundException('Post Not Found');
+
+      return post;
+    } catch (err) {
+      throw err;
+    }
   }
 
   update(id: number, updatePostDto: UpdatePostDto) {

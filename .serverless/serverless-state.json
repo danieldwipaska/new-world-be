@@ -178,7 +178,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/react-ts-new-world/prod/1686559247136-2023-06-12T08:40:47.136Z/react-ts-new-world.zip"
+                "S3Key": "serverless/react-ts-new-world/prod/1687001627453-2023-06-17T11:33:47.453Z/react-ts-new-world.zip"
               },
               "Handler": "dist/serverless.handler",
               "Runtime": "nodejs18.x",
@@ -202,14 +202,14 @@
               "MainLogGroup"
             ]
           },
-          "MainLambdaVersioned6XlWYqzRugkDNyitUAuvdM0CW8z80yf75N5XcEdo": {
+          "MainLambdaVersion0Xc9YwdAUUyr3Y7jM03vClhjqSwGkDZv1ebM8HwY": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "MainLambdaFunction"
               },
-              "CodeSha256": "nn2FNZBnRNCJbM677cMmg+qOzxr13OAgXKRp6wqrDDk="
+              "CodeSha256": "hwq0Mv3AstafzK4mN9hG9j9wU5Au+xZKXeT/ri8zdRM="
             }
           },
           "ApiGatewayRestApi": {
@@ -334,7 +334,7 @@
               "MainLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1686559211967": {
+          "ApiGatewayDeployment1687001604472": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -397,7 +397,7 @@
           "MainLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "MainLambdaVersioned6XlWYqzRugkDNyitUAuvdM0CW8z80yf75N5XcEdo"
+              "Ref": "MainLambdaVersion0Xc9YwdAUUyr3Y7jM03vClhjqSwGkDZv1ebM8HwY"
             },
             "Export": {
               "Name": "sls-react-ts-new-world-prod-MainLambdaFunctionQualifiedArn"
@@ -544,7 +544,7 @@
         "memory": 1024,
         "runtime": "nodejs18.x",
         "vpc": {},
-        "versionLogicalId": "MainLambdaVersioned6XlWYqzRugkDNyitUAuvdM0CW8z80yf75N5XcEdo"
+        "versionLogicalId": "MainLambdaVersion0Xc9YwdAUUyr3Y7jM03vClhjqSwGkDZv1ebM8HwY"
       }
     },
     "configValidationMode": "warn",
@@ -567,7 +567,7 @@
     "artifact": "/home/neeyeol/Documents/Programming/React/react-ts-new-world/api/.serverless/react-ts-new-world.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/react-ts-new-world/prod/1686559247136-2023-06-12T08:40:47.136Z",
+    "artifactDirectoryName": "serverless/react-ts-new-world/prod/1687001627453-2023-06-17T11:33:47.453Z",
     "artifact": "react-ts-new-world.zip"
   }
 }
