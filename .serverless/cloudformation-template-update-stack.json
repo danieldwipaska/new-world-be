@@ -162,7 +162,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/react-ts-new-world/prod/1687001627453-2023-06-17T11:33:47.453Z/react-ts-new-world.zip"
+          "S3Key": "serverless/react-ts-new-world/prod/1687411577024-2023-06-22T05:26:17.024Z/react-ts-new-world.zip"
         },
         "Handler": "dist/serverless.handler",
         "Runtime": "nodejs18.x",
@@ -186,14 +186,14 @@
         "MainLogGroup"
       ]
     },
-    "MainLambdaVersion0Xc9YwdAUUyr3Y7jM03vClhjqSwGkDZv1ebM8HwY": {
+    "MainLambdaVersiong6KTTurF3fkkIvcV9VH8E50Vby6jHW2jsjVRZsrA": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "MainLambdaFunction"
         },
-        "CodeSha256": "hwq0Mv3AstafzK4mN9hG9j9wU5Au+xZKXeT/ri8zdRM="
+        "CodeSha256": "7vxCWJlBW4hDbMZXlYl7l5+9CXYnsonLS1ptukZWChE="
       }
     },
     "ApiGatewayRestApi": {
@@ -318,7 +318,7 @@
         "MainLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1687001604472": {
+    "ApiGatewayDeployment1687411551832": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -381,7 +381,7 @@
     "MainLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "MainLambdaVersion0Xc9YwdAUUyr3Y7jM03vClhjqSwGkDZv1ebM8HwY"
+        "Ref": "MainLambdaVersiong6KTTurF3fkkIvcV9VH8E50Vby6jHW2jsjVRZsrA"
       },
       "Export": {
         "Name": "sls-react-ts-new-world-prod-MainLambdaFunctionQualifiedArn"

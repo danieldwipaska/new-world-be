@@ -1,4 +1,4 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Prop, Schema, SchemaFactory, raw } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
 import { UUID } from 'crypto';
 
@@ -20,6 +20,16 @@ export class Post {
 
   @Prop({ default: '' })
   categories: string;
+
+  @Prop(
+    raw({
+      imgType: { type: String },
+      filename: { type: String },
+      data: { type: Buffer },
+      size: { type: String },
+    }),
+  )
+  thumbnail: Record<string, any>;
 
   @Prop({ default: Date.now() })
   createdAt: Date;

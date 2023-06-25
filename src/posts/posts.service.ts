@@ -11,11 +11,20 @@ export class PostsService {
   constructor(@InjectModel(Post.name) private postModel: Model<PostDocument>) {}
 
   //CREATE A POST
-  async create(createPostDto: CreatePostDto): Promise<Post> {
+  async create(
+    createPostDto: CreatePostDto,
+    file: Express.Multer.File,
+  ): Promise<Post> {
     try {
       const newPost = new this.postModel({
         ...createPostDto,
         postId: v4(),
+        thumbnail: {
+          imgType: file.mimetype,
+          filename: file.filename,
+          data: file.buffer,
+          size: file.size,
+        },
       });
 
       const post: Post = await newPost.save();
